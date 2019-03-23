@@ -63,7 +63,7 @@ class TicTacToe:
             elif not user.id in self.queue and len(self.queue) == 2:
                 await user.send("Game in progress.. pls wait !")
             elif user.id in self.queue:
-                await user.send("Your already in a game!")
+                await user.send("`You're already in a game!`")
         except Exception as error:
             self.delete_img()
             await self.send_error(error)
